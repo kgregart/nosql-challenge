@@ -1,9 +1,13 @@
 # nosql-challenge
 
-Instructions
+# Background
+
 The UK Food Standards Agency evaluates various establishments across the United Kingdom, and gives them a food hygiene rating. You've been contracted by the editors of a food magazine, Eat Safe, Love, to evaluate some of the ratings data in order to help their journalists and food critics decide where to focus future articles.
 
-Part 1: Database and Jupyter Notebook Set Up
+# Instructions
+
+## Part 1: Database and Jupyter Notebook Set Up
+
 Use NoSQL_setup_starter.ipynb for this section of the challenge.
 
 1. Import the data provided in the establishments.json file from your Terminal. Name the database uk_food and the collection establishments. Copy the text you used to import your data from your Terminal to a markdown cell in your notebook.
@@ -20,7 +24,8 @@ Use NoSQL_setup_starter.ipynb for this section of the challenge.
 
 5. Assign the establishments collection to a variable to prepare the collection for use.
 
-Part 2: Update the Database
+## Part 2: Update the Database
+
 Use NoSQL_setup_starter.ipynb for this section of the challenge.
 
 The magazine editors have some requested modifications for the database before you can perform any queries or analysis for them. Make the following changes to the establishments collection:
@@ -55,6 +60,7 @@ The magazine editors have some requested modifications for the database before y
     "Distance":4623.9723280747176,
     "NewRatingPending":True
 }
+
 2. Find the BusinessTypeID for "Restaurant/Cafe/Canteen" and return only the BusinessTypeID and BusinessType fields.
 
 3. Update the new restaurant with the BusinessTypeID you found.
@@ -66,7 +72,8 @@ The magazine editors have some requested modifications for the database before y
 - Use update_many to convert latitude and longitude to decimal numbers.
 - Use update_many to convert RatingValue to integer numbers.
 
-Part 3: Exploratory Analysis
+## Part 3: Exploratory Analysis
+
 Eat Safe, Love has specific questions they want you to answer, which will help them find the locations they wish to visit and avoid.
 
 Use NoSQL_analysis_starter.ipynb for this section of the challenge.
@@ -74,8 +81,10 @@ Use NoSQL_analysis_starter.ipynb for this section of the challenge.
 Some notes to be aware of while you are exploring the dataset:
 
 - RatingValue refers to the overall rating decided by the Food Authority and ranges from 1-5. The higher the value, the better the rating.
-Note: This field also includes non-numeric values such as 'Pass', where 'Pass' means that the establishment passed their inspection but isn't given a number rating. We will coerce non-numeric values to nulls during the database setup before converting ratings to integers.
+_Note: This field also includes non-numeric values such as 'Pass', where 'Pass' means that the establishment passed their inspection but isn't given a number rating. We will coerce non-numeric values to nulls during the database setup before converting ratings to integers._
+
 - The scores for Hygiene, Structural, and ConfidenceInManagement work in reverse. This means, the higher the value, the worse the establishment is in these areas.
+
 Use the following questions to explore the database, and find the answers, so you can provide them to the magazine editors.
 
 Unless otherwise stated, for each question:
@@ -97,8 +106,6 @@ Hint: The London Local Authority has a longer name than "London" so you will nee
 Hint: You will need to compare the geocode to find the nearest locations. Search within 0.01 degree on either side of the latitude and longitude.
 
 4. How many establishments in each Local Authority area have a hygiene score of 0? Sort the results from highest to lowest, and print out the top ten local authority areas.
-
-Hint: You will need to use the aggregation method to answer this.
 
 The first 5 rows of your resulting DataFrame should look something like this:
 
