@@ -77,19 +77,22 @@ Eat Safe, Love has specific questions, which will help them find the locations t
 1. Which establishments have a hygiene score equal to 20?
 
     ![Q1](https://github.com/kgregart/nosql-challenge/blob/main/Images/Q1.png)
+   
 
 2. Which establishments in London have a RatingValue greater than or equal to 4?
 
     ![Q2](https://github.com/kgregart/nosql-challenge/blob/main/Images/Q2.png)
 
    _Note:  Partial results shown_
+   
 
-4. What are the top 5 establishments with a RatingValue of 5, sorted by lowest hygiene score, nearest to the new restaurant added, "Penang Flavours"?
+3. What are the top 5 establishments with a RatingValue of 5, sorted by lowest hygiene score, nearest to the new restaurant added, "Penang Flavours"?
 
     ![Q3](https://github.com/kgregart/nosql-challenge/blob/main/Images/Q3.png)
 
       _Note:  Partial results shown_
+   
 
-6. How many establishments in each Local Authority area have a hygiene score of 0? Sort the results from highest to lowest, and print out the top ten local authority areas.
+4. How many establishments in each Local Authority area have a hygiene score of 0? Sort the results from highest to lowest, and print out the top ten local authority areas.
 
     ![Q4](https://github.com/kgregart/nosql-challenge/blob/main/Images/Q4.png)
